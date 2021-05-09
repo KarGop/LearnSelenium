@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="POM_Test" verbose="5">
+    <classes>
+      <class name="extentReports.TC2.testcases.createLead"/>
+      <class name="extentReports.TC2.testcases.editLead"/>
+      <class name="extentReports.TC2.testcases.duplicateLead"/>
+      <class name="extentReports.TC2.testcases.mergeLead"/>
+      <class name="extentReports.TC2.testcases.deleteLead"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
