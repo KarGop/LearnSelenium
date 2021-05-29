@@ -29,5 +29,5 @@ public class TextChange {
     //ImageIO.write(image, "png", new File("./snap/alert.png"));
     // To click on the 'OK' button of the alert
     alert.accept();
-	}
+}
 }
