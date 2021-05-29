@@ -19,6 +19,7 @@ public class ErailSort {
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
 		//Launch the URL - https://erail.in/
 		driver.get("https://erail.in/");
 		driver.manage().window().maximize();
@@ -35,6 +36,7 @@ public class ErailSort {
 		dst.clear();
 		dst.sendKeys("NDLS",Keys.TAB);
 		//Find all the train names
+		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,20);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@class='DataTable TrainList TrainListHeader']//tr/td[2]")));
 		List<WebElement> list = driver.findElementsByXPath("//table[@class='DataTable TrainList TrainListHeader']//tr/td[2]");
@@ -45,18 +47,18 @@ public class ErailSort {
 		//Get the size of it
 		System.out.println("Size of the ArrayList is "+ arrayList.size());
 		//Print the sorted Train names
-		System.out.println("Trains are ....");
+		System.out.println("Sorted Train names are ....");
 		Collections.sort(arrayList);
 		for (String string : arrayList) {
-			System.out.println(string);
+			System.out.println("\t"+string);
 		}
 		//Add the list into a new Set
-		HashSet set = new HashSet();
+		HashSet<String> set = new HashSet<String>();
 		set.addAll(arrayList);
 		//And print the size of it
 		System.out.println("Size of set is "+set.size());
 		for (Object object : set) {
-			System.out.println(object);
+			System.out.println("\t"+object);
 		}
 	}
 }
