@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LeafTaps">
+
+<parameter name = "url" value ="http://leaftaps.com/opentaps/"></parameter>
+<parameter name = "username" value ="DemoCSR"></parameter>
+<parameter name = "pwd" value ="crmsfa"></parameter>
+
+  <test thread-count="1" name="Create Lead" verbose="2">
+    <classes>
+      <class name="testNG.TC3ReadInputFromExcel.CreateLead"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
