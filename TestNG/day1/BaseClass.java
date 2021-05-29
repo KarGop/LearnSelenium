@@ -27,5 +27,5 @@ public class BaseClass {
   @AfterMethod
   public void postCondition() {
 	  driver.close();
-  } 
+   } 
 }
