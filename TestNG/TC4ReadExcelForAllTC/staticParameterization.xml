@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LeafTapss">
+
+<parameter name = "url" value ="http://leaftaps.com/opentaps/"></parameter>
+<parameter name = "username" value ="DemoSalesManager"></parameter>
+<parameter name = "pwd" value ="crmsfa"></parameter>
+
+  <test thread-count="5" name=" Leads" verbose="5">
+    <classes>
+      <class name="testNG.TC4ReadExcelForAllTC.CreateLead"/>
+      <class name="testNG.TC4ReadExcelForAllTC.EditLead"/>
+      <class name="testNG.TC4ReadExcelForAllTC.DuplicateLead"/>
+      <class name="testNG.TC4ReadExcelForAllTC.MergeLead"/>
+      <class name="testNG.TC4ReadExcelForAllTC.DeleteLead"/>
+      
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
